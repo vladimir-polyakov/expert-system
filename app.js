@@ -2,7 +2,15 @@ var express = require('express');
 var app = express.createServer();
 var discreteOutputMethod = require('./lib/discreteOutputMethod');
 
-var input = {
+require('./routes/main')(app);
+
+app.set('view engine', 'jade');
+
+app.set('view options', {
+  layout: false
+});
+
+/*var input = {
 	linguisticVariables: [{
 		name: 'work time',
 		terms: [{
@@ -85,6 +93,7 @@ var input = {
 	}],
 	values: [{linguisticVariable: 'work time', value: 170}, {linguisticVariable: 'cost', value: 35000}, {linguisticVariable: 'quality', value: 3}]
 };
-//console.log(input);
-console.log(discreteOutputMethod.makeDecision(input));
-//console.log(discreteOutputMethod);
+
+console.log(discreteOutputMethod.makeDecision(input));*/
+
+app.listen(5000);

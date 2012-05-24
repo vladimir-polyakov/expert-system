@@ -1,8 +1,7 @@
-var express = require('express');
+var express = require('express').createServer();
 
-module.exports = express.router(function(app) {
-	console.log(app.get);
-	app.get('*', function(req, res, next) {
-		res.send('test')
+module.exports = function(app) {
+	app.get('/', function(req, res, next) {
+		res.render('index');
 	})
-});
+};
