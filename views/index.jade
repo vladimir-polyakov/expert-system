@@ -1,1 +1,23 @@
-p Hello World
+doctype 5
+html(lang="en")
+	head
+		block head
+			title Курсовая работа - СППР
+			meta(charset="utf-8")
+
+			block scripts
+				script(src="js/jquery.js", type="text/javascript")
+				//if lt IE 9
+					script(src="js/html5shiv.js", type="text/javascript")
+
+			block styles
+				link(rel="stylesheet", type="text/css", href="css/reset.css")
+				link(rel="stylesheet", type="text/css", href="css/styles.css")
+
+	body
+		block body
+			.page-container
+				.page-head
+
+				.page-body
+					block pageBody

@@ -10,6 +10,8 @@ app.set('view options', {
   layout: false
 });
 
+app.use(express.static(__dirname + '/static'));
+
 /*var input = {
 	linguisticVariables: [{
 		name: 'work time',
