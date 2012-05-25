@@ -5,3 +5,104 @@ body {
 .content, .sidebar {
 	padding: 10px 16px;
 }
+
+/* Variables list */ 
+.variables {
+
+}
+
+.variables_add {
+	padding: 4px 0;
+}
+
+.variables_no-items {
+
+}
+
+.variables-list {
+
+}
+
+.variables-list_item {
+	padding-bottom: 6px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 6px;
+}
+
+.variables-list_item-inner {
+	padding: 4px 0;
+	overflow: hidden;
+}
+
+.variables-list_name {
+	float: left;
+	cursor: move;
+	font-size: 14px;
+	line-height: 15px;
+	padding: 2px 7px 3px;
+	max-width: 280px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.variables-list_value {
+	float: left;
+	margin-left: 8px;
+}
+
+.variables-list_edit-btn, .variables-list_remove-btn {
+	float: left;
+	margin-left: 8px;
+}
+
+.variables-list_terms {
+	padding-left: 16px;
+}
+
+.variables-list_terms-add {
+	padding: 4px 0;
+}
+
+/* Terms list */
+.terms-list {
+
+}
+
+.terms-list_item {
+
+}
+
+.terms-list_item-inner {
+	padding: 4px 0;
+	overflow: hidden;
+}
+
+.terms-list_name {
+	float: left;
+	cursor: move;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 2px 7px 3px;
+	max-width: 280px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.terms-list_value-b, .terms-list_value-c {
+	float: left;
+	margin-left: 8px;
+}
+
+.terms-list_edit-btn, .terms-list_remove-btn {
+	float: left;
+	margin-left: 8px;
+}
+
+/* Variables, terms form */
+.variables-form_name, .variables-form_value {
+	margin-right: 8px;
+}
+
+.terms-form_name, .terms-form_value-b, .terms-form_value-c {
+	margin-right: 8px;
+}
