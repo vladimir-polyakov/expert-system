@@ -1,0 +1,7 @@
+body {
+	padding-top: 60px;
+}
+
+.content, .sidebar {
+	padding: 10px 16px;
+}

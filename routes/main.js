@@ -3,7 +3,11 @@ var express = require('express').createServer(),
 
 module.exports = function(app) {
 	app.get('/', function(req, res, next) {
-		res.render('index');
+		res.render('editor');
+	});
+
+	app.get('/result', function(req, res, next) {
+		res.render('result');
 	});
 
 	app.post('/makeDecision', function(req, res, next) {
