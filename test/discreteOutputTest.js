@@ -1,5 +1,5 @@
 module.exports = {
-	"method": "continuosOutput",
+	"method": "discreteOutput",
 	"input": {
 		"linguisticVariables": [{
 			"name": "work time",

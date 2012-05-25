@@ -1,5 +1,6 @@
 var express = require('express').createServer(),
-	discreteOutputMethod = require('../lib/discreteOutputMethod');;
+	discreteOutputMethod = require('../lib/discreteOutputMethod'),
+	continuosOutputMethod = require('../lib/continuosOutputMethod');
 
 module.exports = function(app) {
 	app.get('/', function(req, res, next) {
@@ -16,6 +17,12 @@ module.exports = function(app) {
 				res.json({
 					status: 4096,
 					result: discreteOutputMethod.makeDecision(req.body.input)
+				});
+			break;
+			case 'continuosOutput':
+				res.json({
+					status: 4096,
+					result: continuosOutputMethod.makeDecision(req.body.input)
 				});
 			break;
 			default: res.json({
