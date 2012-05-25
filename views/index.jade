@@ -4,26 +4,39 @@ html(lang="en")
 		block head
 			title Курсовая работа - СППР
 			meta(charset="utf-8")
+			meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
 			block scripts
 				script(src="js/jquery-1.7.2.min.js", type="text/javascript")
 				script(src="js/bootstrap.min.js", type="text/javascript")
+				//if lt IE 9
+					script(src="js/html5.js", type="text/javascript")
 
 			block styles
 				link(rel="stylesheet", type="text/css", href="css/bootstrap.min.css")
+				link(rel="stylesheet", type="text/css", href="css/bootstrap-responsive.min.css")
 				link(rel="stylesheet", type="text/css", href="css/styles.css")
 
 	body
 		block body
+			.navbar.navbar-fixed-top
+				.navbar-inner
+					.container
+						.brand Курсовая работа по СППР
+						.btn-group.pull-right
+							a.btn.dropdown-toggle(href="javascript:void(0);", data-toggle="dropdown")
+								i.icon-th-list
+								|  Выбор метода 
+								b.caret
+							ul.dropdown-menu
+								li
+									a(href="javascript:void(0);") Метод 1
+								li
+									a(href="javascript:void(0);") Метод 2
+								li
+									a(href="javascript:void(0);") Метод 3
+								li
+									a(href="javascript:void(0);") Метод 4
+
 			.container
-				.row
-					.span12.page-head head
-
-				.row
-					.span8.content
-						block content
-							| content
-
-					.span4.sidebar
-						block sidebar
-							| sidebar
+				block container
