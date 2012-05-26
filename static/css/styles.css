@@ -30,13 +30,18 @@ body {
 }
 
 .variables-list_item-inner {
-	padding: 4px 0;
+	padding: 4px;
 	overflow: hidden;
+	border-radius: 4px;
+}
+
+.variables-list_item-inner:hover {
+	background: #dcdcdc;
 }
 
 .variables-list_name {
 	float: left;
-	cursor: move;
+	cursor: pointer;
 	font-size: 14px;
 	line-height: 15px;
 	padding: 2px 7px 3px;
@@ -51,7 +56,7 @@ body {
 }
 
 .variables-list_edit-btn, .variables-list_remove-btn {
-	float: left;
+	float: right;
 	margin-left: 8px;
 }
 
@@ -73,13 +78,18 @@ body {
 }
 
 .terms-list_item-inner {
-	padding: 4px 0;
+	padding: 4px;
 	overflow: hidden;
+	border-radius: 4px;
+}
+
+.terms-list_item-inner:hover {
+	background: #dcdcdc;
 }
 
 .terms-list_name {
 	float: left;
-	cursor: move;
+	cursor: pointer;
 	font-size: 12px;
 	line-height: 15px;
 	padding: 2px 7px 3px;
@@ -94,7 +104,7 @@ body {
 }
 
 .terms-list_edit-btn, .terms-list_remove-btn {
-	float: left;
+	float: right;
 	margin-left: 8px;
 }
 
@@ -106,3 +116,41 @@ body {
 .terms-form_name, .terms-form_value-b, .terms-form_value-c {
 	margin-right: 8px;
 }
+
+.rules {
+
+}
+
+.rules-list {
+}
+
+.rules-list_item {
+	padding: 4px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.conditions-list {
+
+}
+
+.conditions-list_item {
+	padding: 4px 0;
+}
+
+.conditions-list_variable, .conditions-list_term {
+	padding: 2px 7px 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 15px;
+	background: #d9d9d9;
+	text-align: center;
+	color: #363636;
+}
+
+.rules_add {
+	padding: 4px 0;
+}
+
+

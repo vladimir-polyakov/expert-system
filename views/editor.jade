@@ -4,12 +4,33 @@ append scripts
 	script(src="js/editor.js", type="text/javascript")
 
 block content
-	h3 База знаний
-	.knowledge-base
-		.knowledge-base_no-items
+	h3 Редактор бызы знаний
+	#js-rules.rules
+		ul#js-rules-list.rules-list.unstyled(style="display:none;")
+			li#js-rules-list_fake-item.js-rules-list_item.rules-list_item
+				h4 Если
+				.js-if-conditions-list.conditions-list
+					#js-conditions-list_fake-item.js-conditions-list_item.conditions-list_item.clearfix
+						.span3
+							.js-conditions-list_variable.conditions-list_variable Переменная
+						.span3
+							.js-conditions-list_term.conditions-list_term Терм
+						//- button.js-conditions-list_remove-btn.conditions-list_remove-btn.btn.btn-mini.btn-danger(type="button", title="Удалить")
+						//- 	i.icon-trash.icon-white
+				h4 то
+				.js-then-conditions-list.conditions-list
+
+		#js-rules_add.rules_add
+			button#js-rules_add-btn.rules_add-btn.btn.btn-mini(type="button")
+				i.icon-plus
+				|  Добавить правило
+
+	.form-actions(style="text-align: center;")
+		button#js-process.btn.btn-large.btn-success(type="button") Вычислить
+		
 
 block sidebar
-	h3 Лингвистические переменные
+	h3 Редактор переменных и термов
 
 	#js-variables.variables
 		ul#js-variables-list.variables-list.unstyled(style="display: none;")
@@ -17,10 +38,10 @@ block sidebar
 				.js-variables-list_item-inner.variables-list_item-inner
 					.js-variables-list_name.variables-list_name.label
 					.js-variables-list_value.variables-list_value
-					button.js-variables-list_edit-btn.variables-list_edit-btn.btn.btn-mini.btn-success(type="button", title="Редактировать")
-						i.icon-pencil.icon-white
 					button.js-variables-list_remove-btn.variables-list_remove-btn.btn.btn-mini.btn-danger(type="button", title="Удалить")
 						i.icon-trash.icon-white
+					button.js-variables-list_edit-btn.variables-list_edit-btn.btn.btn-mini.btn-success(type="button", title="Редактировать")
+						i.icon-pencil.icon-white
 
 				.js-variables-list_terms.variables-list_terms
 					ul.js-terms-list.terms-list.unstyled(style="display: none;")
@@ -29,10 +50,10 @@ block sidebar
 								.js-terms-list_name.terms-list_name.badge.badge-info
 								.js-terms-list_value-b.terms-list_value-b
 								.js-terms-list_value-c.terms-list_value-c
-								button.js-terms-list_edit-btn.terms-list_edit-btn.btn.btn-mini.btn-success(type="button", title="Редактировать")
-									i.icon-pencil.icon-white
 								button.js-terms-list_remove-btn.terms-list_remove-btn.btn.btn-mini.btn-danger(type="button", title="Удалить")
 									i.icon-trash.icon-white
+								button.js-terms-list_edit-btn.terms-list_edit-btn.btn.btn-mini.btn-success(type="button", title="Редактировать")
+									i.icon-pencil.icon-white
 
 					.js-variables-list_terms-add.variables-list_terms-add
 						button.js-variables-list_terms-add-btn.variables-list_terms-add-btn.btn.btn-mini(type="button")
@@ -40,7 +61,7 @@ block sidebar
 							|  Добавить терм
 
 		#js-variables_add.variables_add
-			button#js-variables-list_terms-add-btn.variables-list_terms-add-btn.btn.btn-mini(type="button")
+			button#js-variables_add-btn.variables_add-btn.btn.btn-mini(type="button")
 				i.icon-plus
 				|  Добавить переменную
 
@@ -53,8 +74,8 @@ block sidebar
 
 		#js-terms-form.terms-form.form-inline(style="display: none;")
 			input#js-terms-form_name.terms-form_name.span2(type="text", placeholder="Имя терма")
-			input#js-terms-form_name.terms-form_value-b.span1(type="text", placeholder="b")
-			input#js-terms-form_name.terms-form_value-c.span1(type="text", placeholder="c")
+			input#js-terms-form_value-b.terms-form_value-b.span1(type="text", placeholder="b")
+			input#js-terms-form_value-c.terms-form_value-c.span1(type="text", placeholder="c")
 			button#js-terms-form_btn.terms-form_btn.btn(type="button")
 				i.icon-ok
 				|  OK
